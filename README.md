@@ -10,6 +10,8 @@ BigQuery Release Hub makes it easier to keep up with changes published in the of
 
 Instead of navigating through release-note pages manually, users can explore updates in one place, search for topics they care about, filter releases by type, open the original documentation, and turn an update into a ready-to-share post.
 
+> BigQuery Release Hub is an independent personal project. It is not affiliated with, endorsed by, or maintained by Google.
+
 ## What You Can Do
 
 ### Browse BigQuery Updates
@@ -93,15 +95,16 @@ The project focuses on making information easier to **discover, navigate, unders
 
 ## Development Approach
 
-This project was created using an **AI-assisted / vibe-coding workflow**, including the Antigravity CLI.
+This project was created using an **AI-assisted development workflow**, including the Antigravity CLI.
 
 AI tools were used extensively during development, followed by iterative testing and refinement of the application's behavior, data flow, filtering experience, sharing workflow, and overall user experience.
 
 ## Project Structure
 
 ```text
-antigravity-event-talks-app/
+bigquery-release-hub/
 ├── app.py
+├── requirements.txt
 ├── templates/
 │   └── index.html
 ├── static/
@@ -121,9 +124,9 @@ antigravity-event-talks-app/
 ### Setup
 
 ```bash
-git clone https://github.com/stharesh/antigravity-event-talks-app.git
-cd antigravity-event-talks-app
-pip install flask
+git clone https://github.com/stharesh/bigquery-release-hub.git
+cd bigquery-release-hub
+pip install -r requirements.txt
 python app.py
 ```
 
@@ -146,6 +149,8 @@ The application currently focuses on:
 - A responsive dashboard experience
 
 Release data depends on the availability of the official Google Cloud release feed.
+
+The application renders formatted content received from that official feed. It should not be pointed at an untrusted or user-controlled feed without adding stricter HTML sanitization.
 
 ## Potential Extensions
 
